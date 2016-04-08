@@ -1,62 +1,62 @@
-var button=$('button');
-var nameInput=$('.name-input');
-var websiteInput=$('.website-input');
-var emailInput=$('.email-input');
-var textarea=$('.textarea');
-var success=$('.success');
-var section=$('.section')
-var hasError=false;
-var errorMessage1=$('#error-message1');
-var errorMessage2=$('#error-message2');
-var errorMessage3=$('#error-message3');
-var errorMessage4=$('#error-message4');
+@media (min-width: 400px) {
 
-button.on('click', function() {
-  if(nameInput.val()==='') {
-     hasError=true;
-     errorMessage1.html('Name cannot be left empty');
-     errorMessage1.css({marginBottom: '1em'});
-     nameInput.css({borderLeft: '0.5em solid red'});
+  body {
+    margin: 0 auto;
+    padding: 2em;
+    background: #1F1F27;
   }
 
-  if(emailInput.val() ==='') {
-    hasError=true;
-    error2.html('Please enter an email address');
-    error2.css({marginBottom: '1em'});
-    emailInput.css({borderLeft: '0.5em solid red'});
+  h1 {
+    padding-bottom: 0.5em;
   }
 
-  if(emailInput.val() !=='' && emailInput.val().indexOf('@') === -1) {
-    hasError=true;
-    error2.html('Email must have contain an \'@\'');
-    error2.css({marginBottom: '1em'});
-    emailInput.css({borderLeft: '0.5em solid red'});
+  h3 {
+    font-weight: lighter;
+    margin-bottom: 0;
+    font-size: 1.25em;
   }
 
-  if(websiteInput.val()==='') {
-    hasError=true;
-    error3.html('Website must start with http://');
-    error3.css({marginBottom: '1em'});
-    websiteInput.css({borderLeft: '0.5em solid red'});
+  input {
+    margin: 0 auto;
+    width: 100%;
+    height: 3em;
+    border-left: 0.5em solid #1F1F27;
+    font-size: 1em;
   }
 
-  if(textarea.val()==='') {
-    hasError=true;
-    error4.html('Message cannot be left empty');
-    error4.css({marginBottom: '1em'});
-    textarea.css({borderLeft: '0.5em solid red'});
+  .section {
+    height: 100%;
+    padding: 2em;
+    background: #fff;
   }
 
-  if(!hasError===true){
-    section.css({display: 'none'});
-    success.css({
-            display: 'block',
-            background: '#fff',
-            textAlign: 'center',
-            fontWeight: 'bold',
-            padding: '4em'
-          });
-    success.html('Thanks for contacting us '+nameInput.val()+'. We have received your message and will be in touch with you shortly.');
-
+  textarea {
+    margin: 0 auto;
+    width: 100%;
+    height: 20em;
+    border-left: 0.5em solid #1F1F27;
+    font-size: 1em;
   }
-});
+
+  button {
+    background: #1D1E2E;
+    color: #fff;
+    height: 7em;
+    margin-top: 1.5em;
+    width: 15em;
+    border: none;
+  }
+
+  .red {
+    color: red;
+  }
+}
+
+@media(min-width: 800px) {
+  body {
+    padding: 8em;
+  }
+
+  button {
+    background: #88C470;
+  }
